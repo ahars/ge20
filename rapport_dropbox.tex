@@ -1,0 +1,208 @@
+\documentclass[a4paper, 10pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{mdwlist}
+\geometry{hmargin=2.5cm, vmargin=1.5cm}
+
+%opening
+\title{GE20 - Dropbox}
+\author{Pierre-François Rouleau - Antoine Hars}
+
+\begin{document}
+
+\maketitle
+
+\section*{Contexte}
+De nos jours, La consommation de services ne cesse d'augmenter, en plus de la consommation de produits issus de l'industrie.
+Cette consommation croissante de services, soutenue par une \'evolution constante des technologies informatiques, permet aux consommateurs
+de changer leurs habitudes comme par exemple dans le domaine du stockage de donn\'ees.\\ \\
+Nous pouvons prendre comme exemple les \'evolutions des habitudes des consommateurs pour le transfert et le transport de fichiers :
+D'une utilisation de supports physiques de type cl\'e usb ou disque dur portable, les utilisateurs ont tendance \`a se tourner vers des solutions
+ne requ\'erant aucun support physique comme le stockage en ligne sur des serveurs distants.\\
+On utilise le terme de \textit{Cloud Computing} pour d\'esigner les techniques de sauvegarde distante de donn\'ees sur des serveurs.
+En utilisant cette façon de faire, les utilisateurs du \textit{Cloud} n'ont pas \`a se soucier du support pour la sauvegarde mais
+seulement des donn\'ees sauvegard\'ees.\\ \\
+Cette \'evolution dans le stockage apporte une plus grande simplicit\'e pour les utilisateurs
+qui n'ont besoin que d'un ordinateur et d'une connexion internet pour recueillir leurs donn\'ees
+au lieu de devoir faire\\attention aux diff\'erentes cl\'es usb que les consommateurs peuvent avoir.\\
+Il y a un ph\'enom\`ene de Destruction Cr\'eatrice (\'enonc\'e par Schumpeter), de transfert de comp\'etences entre ces deux domaines.
+La nature des biens consomm\'es et utilis\'es par les consommateurs change.\\ \\
+Nous avons pu observer qu'un de ces services de \textit{Cloud Computing} connaissait un plus large succ\`es
+que ses concurrents aupr\`es des consommateurs : Le service DropBox.\\
+Nous avons donc choisi de nous int\'eresser et d'\'etudier ce service tout particuli\`erement.\\ \\
+
+\section*{Pr\'esentation de DropBox}
+\includegraphics[height = 2cm, width = 6cm]{jpg/dropbox_logo.png}\\
+DropBox est un service de stockage et de partage de fichiers en ligne permettant \`a ses utilisateurs de stocker et
+de synchroniser des fichiers entre plusieurs ordinateurs.\\
+Ce service s'est fait surtout connaitre du grand public par son refus de rachat
+par l'entreprise Apple pour un montant de 800 millions de Dollars.\\ \\
+Ce service se veut simple d'utilisation et ce sur n'importe quelle plateforme.
+Il fonctionne donc sur les syst\`emes d'exploitation Windows, Linux et Mac, ainsi que sur les appareils de type Smartphone et Tablette).\\ \\
+L'origine de ce service vient de l'envie, de la part de ses cr\'eateurs Drew Houston et Arash Ferdowsi (deux anciens \'etudiants de la MIT),
+de palier aux soucis li\'es \`a l'utilisation de supports physiques tels que la perte, l'oubli et la destruction d'une cl\'e usb par exemple.\\
+Les deux fondateurs du service DropBox ont donc choisi de fonder leur startup en 2007.\\
+Ils ont ensuite lanc\'e le d\'eploiement de leur solution de stockage en ligne courant 2008.\\
+L'entreprise est localis\'ee \`a San Francisco en Californie.
+\newpage
+\noindent
+DropBox est un service principalement centr\'e sur le B2C (Business to Customer) mais commençant \`a s'int\'eresser au B2B (Business to Business),
+s'adressant donc autant aux entreprises qu'aux particuliers.\\ \\
+Au niveau de ses acquisitions depuis sa cr\'eation, DropBox en a effectu\'e plusieurs comme :
+\begin{itemize}
+ \item Le rachat de \textbf{Cove}, un outil puissant de collaboration dans l'\'elaboration de projets informatiques.
+ \item Le rachat du service \textbf{AudioGalaxy} qui proposait un outil de partage de musiques.
+ \item Le rachat de l'entreprise \textbf{Snapjoy} pour une meilleure int\'egration des photos dans DropBox.
+ \item Le rachat de la startup \textbf{TapEngage} pour une gestion et un affichage efficaces des publications et des annonces
+sur diff\'erentes tailles d'\'ecran.
+ \item Le rachat du client de messagerie \textbf{MailBox} de la compagnie Orchestra pour un montant de\\100 millions de Dollars
+afin de permettre de stocker des donn\'ees dans son Cloud tout en les rendant accessibles depuis son service de messagerie
+(Google a le m\^eme fonctionnement avec Gmail et Drive, un service similaire \`a DropBox).
+\end{itemize}
+Ces acquisitions nous ont permis d'observer que DropBox tend \`a \^etre plus qu'un simple syst\`eme de stockage de donn\'ees en ligne,
+mais souhaite proposer \`a ses clients, une solution, un service capable de g\'erer de mani\`ere simple et efficace
+tous les types de fichiers courants.
+Par exemple, pouvoir \'ecouter sa musique sans avoir le fichier d'une chanson sur son appareil,
+pouvoir partager et surtout regarder ses photos facilement.
+DropBox souhaite aussi offrir une solution g\'en\'erique permettant de g\'erer ses donn\'ees stock\'ees sur le Cloud en y associant des mails.\\ \\
+En 2012, DropBox a effectu\'e une lev\'ee de fonds valorisant la soci\'et\'e \`a un montant de 4 milliards de dollars et
+pr\'epare son entr\'ee en bourse pour le deuxi\`eme semestre de l'ann\'ee 2013.\\ \\
+
+\section*{Le fonctionnement du service DropBox}
+\includegraphics[height = 4cm, width = 4cm]{jpg/dropbox_1.png}
+\includegraphics[height = 3cm, width = 6cm]{jpg/dropbox_3.jpg}\\ \\
+Pour permettre d'avoir acc\`es \`a ses fichiers sans support physique de type usb, DropBox fonctionne de la mani\`ere suivante :\\
+Lors de l'installation de l'application sur la machine d'un client, un agent est install\'e.\\
+Cette agent a pour but d'envoyer chaque modification de fichier observ\'ee sur les serveurs de l'entreprise DropBox.\\
+Une fois le fichier enregistr\'e sur un des serveurs de DropBox, il est transf\'er\'e sur toutes les machines abonn\'ees
+au compte du client effectuant la manipulation.\\
+Les agents de synchronisation de chacune des machines se chargent donc de recevoir des serveurs les modifications de fichiers pour
+finaliser la synchronisation des fichiers entre les diff\'erentes machines \`a\\disposition du client.
+Nous pouvons dire que tout changement dans un dossier DropBox donne lieu \`a un \'ev\`enement qui, si le fichier est modifi\'e,
+d\'eclenche une synchronisation du d\^it fichier.\\ \\
+Un point important de l'utilisation d'un service de type DropBox vient du fait que les donn\'ees sont h\'eberg\'ees localement d'une part
+et sur un serveur distant d'autre part (nous pouvons utiliser le terme de cloud ou nuage pour d\'efinir cette sauvegarde sur un serveur distant).
+Cette sauvegarde \`a distance apporte un m\'ecanisme d'historisation des modifications et 
+permet donc aux utilisateurs de rattraper les \'eventuelles erreurs op\'er\'ees sur leurs fichiers et
+surtout les suppressions non-voulues de fichiers.
+
+\newpage
+\noindent
+Gr\^ace \`a ce service, il n'est plus question de se soucier de l'utilisation d'un support physique pour transporter ses donn\'ees
+ou de l'utilisation des envois de fichiers par email pour r\'ecup\'erer ses donn\'ees.\\
+Et concernant la s\'ecurit\'e dans le stockage des donn\'ees, les communications pour la synchronisation des fichiers sont crypt\'ees et
+les dossiers priv\'es le sont eux aussi. Ils ne sont accessibles que par les personnes que le client a invit\'e.\\ \\
+
+\section*{Les statistiques}
+Dans un secteur o\`u la comp\'etition est rude avec beaucoup de concurrence
+(on a d\'enombr\'e une vingtaine d'applications de stockage en ligne dont Box, Skydrive de Microsoft, Google Drive, iCloud d'Apple,\\SugarSinc,
+etc..), DropBox a su cro\^itre tr\`es rapidement :\\
+Fin 2008, ce service comptabilisait un total de 100 000 utilisateurs diff\'erents.
+En 2009, il en comptait 2 millions, 4 millions en 2010, 25 millions en 2011 et
+\`a la fin 2012, l'entreprise comptabilisait 200 millions de clients diff\'erents.\\
+L'application est install\'ee sur pas moins de 250 millions d'appareils et
+en terme de fichier, 1 milliards de fichiers sont sauvegard\'es tous les 48 heures.\\ \\
+Du point de vue financier, DropBox comptabilise une centaine d'employ\'es et g\'en\'erait des revenus \`a hauteur
+de 240 millions de Dollars en 2011.\\
+Nous pouvons dire que le service DropBox ne d\'eroge pas \`a la r\`egle de l'effet r\'eseau \'enonçant que l'utilit\'e d'un service
+a tendance \`a augmenter avec le nombre d'utilisateurs, ce qui a pour cons\'equence de cr\'eer une cristallisation autour de cet acteur
+par rapport aux autres.\\ \\
+
+\section*{L'\'economie associ\'ee \`a DropBox}
+Le service Dropbox est d\'ecoup\'e en 2 sections pour appliquer le mod\`ele \'economique Freemium:
+\begin{itemize*}
+ \item Une offre gratuite de base.
+ \item Une offre premium payante.\\
+\end{itemize*}
+Les clients se voient offrir un compte gratuit lors de l'inscription avec un espace de stockage limit\'e \`a\\2 Go.
+Pour b\'en\'eficier de plus d'espace de stockage, les clients ont plusieurs possibilit\'es.\\
+Ils peuvent :
+\begin{itemize}
+ \item Parrainer de futurs clients en fournissant un lien sp\'ecial d'inscription.
+\`A chaque fois qu'un nouvel utilisateur s'inscrit en utilisant ce lien, 500 Mo sont ajout\'es au compte parrain.
+Au final, il est possible de parrainer un maximum de 32 amis pour obtenir de l'espace de stockage ce qui correspond \`a 16 Go.
+ \item Se connecter aux r\'eseaux sociaux (Facebook et Twitter).
+ \item Donner son avis sur le service DropBox.
+ \item Ex\'ecuter toutes les \'etapes de prise en main du service DropBox.
+ \item Basculer son compte gratuit en compte premium payant qui nous permet d'ajouter un espace de 100 Go, ou 200 Go ou encore 500 Go.
+ \item Basculer son compte gratuit en compte entreprise qui se tourne vers les entreprises d\'esirant int\'egrer le \textit{Cloud Computing}
+dans leurs processus de production.\\
+Dans ce cas de figure, la taille de l'espace de stockage n'est plus le point primordial de l'offre mais
+plut\^ot le nombre de personnes qui interagissent en m\^eme temps sur le projet.\\
+Le service DropBox pour ce cas, offre une plus forte s\'ecurit\'e,
+un support t\'el\'ephonique et les outils n\'ecessaires pour la gestion des versions d'application.\\ \\
+\end{itemize}
+
+\section*{La r\'eussite de DropBox}
+Du fait de sa simplicit\'e d'utilisation, DropBox se d\'emarque de ses concurrents et
+a atteint 50 millions de clients actifs en seulement quelques ann\'ees,
+tout en sachant qu'environ 96\% de ces utilisateurs poss\`edent un compte classique (non payant).\\
+L'impressionnante r\'eussite de DropBox par rapport \`a ses concurrents vient du fait que dans un premier temps,
+il s'agit d'un service simple et disponible sur toutes les plateformes du march\'e et
+que dans un\\second temps, ce service dispose d'une communaut\'ee d'utilisateurs tr\`es pr\'esente et soucieuse
+de\\contribuer \`a l'am\'elioration du produit.\\ \\
+DropBox s'inscrit plus dans une th\'ematique de proposition d'un service global que de services.\\
+Ces concurrents sont plus dans une optique de prestations immat\'erielles avec peu de prise en compte du retour client.
+Cela conduit au besoin d'une forte publicit\'e pour recruter des clients
+car ceux-ci expriment moins de recommendations que si leur avis comptait.\\
+Et depuis la r\'eussite du service DropBox,
+De plus en plus de services similaires s'inspirent de ses m\'ethodes de p\'en\'etration de march\'e.\\ \\
+Dans le cas de DropBox, le client est au coeur du produit o\`u le but est de rendre service avant tout.\\
+Ce produit propose une solution \`a un probl\`eme en restant le plus proche des besoins des clients.\\
+DropBox a su imposer un service, non primordial pour les consommateurs en amont,
+mais rapidement devenu comme indispensable pour ces clients, les risques \'etant de proposer un produit qui n'int\'eresserait personne.\\
+Avant l'arriv\'ee de DropBox sur le march\'e, des syst\`emes de stockage et de partage de fichiers en ligne avaient d\'ej\`a \'et\'e mis en place
+mais aucun n'avait su s'imposer aupr\`es du grand public car ne proposant pas un produit simple et utilisable sur tous les supports disponibles.
+Ces syst\`emes \'etaient plut\^ot utilis\'es par des utilisateurs aguerris et non novices.\\ \\
+Il est important de notifier que tr\`es peu d'annonces publicitaires ont \'et\'e effectu\'ees pour promouvoir ce service,
+la promotion de DropBox n'a eu lieu que par l'interm\'ediaire de ses clients au moyen du bouche-\`a-oreille et du parrainage principalement.\\ \\
+Tout au long de son processus d'am\'elioration de la qualit\'e de son produit, DropBox a laiss\'e une place primordiale aux retours de ses clients
+(il est possible de gagner de l'espace de stockage en envoyant une critique du service \`a l'entreprise).\\
+Compar\'e \`a ses concurrents, DropBox propose moins d'espace de stockage \`a la base mais reste plus pl\'ebiscit\'e par les consommateurs
+car il r\'epond de mani\`ere plus optimale \`a leurs attentes.\\ \\
+
+\section*{Le futur de DropBox en bourse}
+L'entreprise DropBox souhaitant effectuer une entr\'ee en bourse \`a la fin de l'ann\'ee 2013 et
+donc\\convaincre les march\'es financiers de sa sant\'e sur le court, le moyen et le long terme, rencontre quelques r\'eticences.\\ \\
+Le but derri\`ere l'entr\'ee en bourse de DropBox est d'avoir la possibilit\'e de faire une lev\'ee de fonds
+pour accro\^itre son potentiel de financement avec de nouveaux investisseurs.
+Son entr\'ee en bourse permettra aussi de garantir une bonne visibilit\'e vis \`a vis de ses concurrents.\\ \\
+Cette r\'eticence a pour origine que les investisseurs pr\'ef\`erent aujourd'hui les acteurs du B2B (Business to Business) porteurs de marges,
+ce qui n'est pas le cas pour DropBox avec ses 96\% de comptes gratuits.\\
+Pour palier \`a cette r\'eticence des investisseurs, l'entreprise doit accro\^itre son catalogue d'utilisateurs\\professionnels.
+Pour cela, DropBox leur propose un compl\'ement serviciel avec le conseil client sur les options \`a souscrire,
+un service apr\`es-vente pour les probl\`emes rencontr\'es.\\
+DropBox veille, avant tout, \`a leur fournir une fonctionnalit\'e.\\ \\
+Le fait est qu'\`a ce jour, DropBox tire ses b\'en\'efices majoritairement des particuliers.\\
+Peu d'entreprises ont adopt\'e ce service alors que son principal concurrent Box,
+qui compte lui aussi\\effectuer une entr\'ee en bourse mais au premier semestre de l'ann\'ee 2014,
+est plus orient\'e vers des\\utilisateurs professionnels,
+ce qui fait que Box est moins concern\'e par cette r\'eticence de la part des march\'es financiers.
+\newpage
+\noindent
+De plus, le contexte financier actuel nous a montr\'e que les valeurs technologiques d\'eçoivent les march\'es.
+Le cas de l'entr\'ee en bourse de Facebook a montr\'e que les entreprises d'informatique, proposant un service,
+n'inspiraient pas confiance et donc n'obtenaient pas la lev\'ee de fonds estim\'ee \`a la base.\\
+Cet \'ev\`enement peut \^etre un \'el\'ement qui rajoute de la d\'efiance de la part des march\'es vis \`a vis de DropBox.
+
+\section*{Probl\'ematique}
+Nous en sommes donc \`a nous poser les questions suivantes :\\
+Dans un contexte o\`u la concurrence est tr\`es pr\'esente, quels ont \'et\'e les outils qui ont permis la r\'eussite de ce service
+cr\'e\'e \`a la base par des ing\'enieurs peu experts en marketing ?\\
+Quelles strat\'egies de p\'en\'etration de march\'e ont \'et\'e utilis\'ees dans le cas de DropBox ?\\
+De plus, quels ont \'et\'e les points de diff\'erenciations notables qui ont permis de d\'emarquer ce produit des autres ?\\
+Pour finir, en pr\'evision de l'entr\'ee en bourse de cette valeur technologique,
+les outils et strat\'egies\\marketing adopt\'es sont-ils toujours efficaces du fait du changement de cibles
+(du consommateur aux investisseurs) ?
+
+\section{Partie 1}
+
+\section{Partie 2}
+
+\section{Partie 3}
+
+\end{document}
